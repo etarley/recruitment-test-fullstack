@@ -12,11 +12,13 @@
 - Take in mind the User Experience UX. We are evaluating the usability of the user interface.
 - Be sure all the assets are in the project before sending.
 
-### Task 1
+## Task 1
 
 From the following array, reverse it, but keep the special characters in the same position.
 
-```[n,2,&,a,l,9,$,q,47,i,a,j,b,z,%,8]```
+```
+[n,2,&,a,l,9,$,q,47,i,a,j,b,z,%,8]
+```
 
 In this case:
 
@@ -26,7 +28,7 @@ In this case:
 
 The solution needs to be dynamic (if the special character's position changed, keep it as same).
 
-### Task 2
+## Task 2
 
 From the Dog API fetch the following data:
 
@@ -36,11 +38,13 @@ From the Dog API fetch the following data:
 - Don’t use any CSS library or framework
 - Follow the UI Mockup to complete this task.
 
+![Task 2](/assets/task_2.jpg)
+
 Mockup for Dog API
 
 The grid needs to be responsive.
 
-### Task 3
+## Task 3
 
 1 - Given the input data on a form, store the fields with multiple values in a database, please be sure to validate the form as well, input data must include:
 
@@ -54,5 +58,7 @@ The grid needs to be responsive.
 3 - Read the database table data and show the product information to the logged-in user only
 
 4 - The product layout must be as a carousel of product list based on the mockup design below:
+
+![Task 3](/assets/task_3.jpg)
 
 You may use whatever you like to solve these problems Good luck 🤗
