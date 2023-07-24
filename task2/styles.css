@@ -1,0 +1,113 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Add this line */
+  align-items: center; /* Change from start to center */
+  background-color: #eaac8b;
+}
+
+h1 {
+  grid-column: 1 / -1; /* Make the h1 span the entire width */
+  text-align: left;
+  color: #6d597a;
+  font-family: 'Roboto', sans serif;
+  padding: 20px;
+}
+
+#dog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.dog-item {
+  margin: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px 0 rgba(31, 38, 135, 0.37);
+  overflow: hidden;
+}
+
+.dog-item:hover {
+  box-shadow: 0 8px 30px rgba(31, 38, 135, 0.37);
+  transform: scale(1.05);
+}
+
+.dog-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.dog-item h2 {
+  text-align: center;
+  font-family: 'Roboto', sans serif;
+  color: #6d597a;
+  padding: 15px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.sub-breed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(109, 89, 122, 0.7);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.sub-breed ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.sub-breed li {
+  margin-bottom: 10px;
+}
+
+.image-container:hover .sub-breed {
+  height: 100%;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  #dog-container {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #dog-container {
+    grid-template-columns: repeat(auto-fill, minmax(60%, 1fr));
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #dog-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
