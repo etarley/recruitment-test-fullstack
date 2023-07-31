@@ -3,10 +3,9 @@ import { UserButton } from '@clerk/nextjs';
 import { main } from './actions';
 import { ProductCarousel } from '@/components/carousel';
 import { Product } from '@prisma/client';
-const SERVER_URL = 'http://localhost:3000'; // change this to your server's URL
 
 async function getProducts() {
-  const res = await fetch(`${SERVER_URL}/products`, {
+  const res = await fetch(`${process.env.SERVER_ROOT_URL}/products`, {
     cache: 'no-cache',
     next: {
       tags: ['products'],
