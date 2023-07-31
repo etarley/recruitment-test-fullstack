@@ -18,27 +18,22 @@ interface ProductProps {
 
 const ProductCard: React.FunctionComponent<ProductProps> = ({ product }) => {
   return (
-    <Card className='mx-6'>
+    <Card className='mx-6 h-60'>
       <CardContent>
-        <div className='w-full pt-4'>
-          <AspectRatio ratio={16 / 9}>
-            <Image
-              src={product.image}
-              alt={`Image of ${product.name}`}
-              width={450}
-              height={300}
-            />
-          </AspectRatio>
-        </div>
-        <CardHeader>
-          <CardTitle>{product.name}</CardTitle>
-        </CardHeader>
-        <CardDescription>{product.description}</CardDescription>
-      </CardContent>
+        <Image
+          src={product.image}
+          alt={`Image of ${product.name}`}
+          width={450}
+          height={300}
+          className='object-cover w-19/20 h-1/3 pt-4 mx-auto'
+        />
+        <CardTitle className='my-2 text-center '>{product.name}</CardTitle>
+        <div className='text-center my-2'>${product.price}</div>
 
-      <CardFooter>
-        <div className={styles.price}>${product.price}</div>
-      </CardFooter>
+        <CardDescription className='text-center'>
+          {product.description}
+        </CardDescription>
+      </CardContent>
     </Card>
   );
 };
