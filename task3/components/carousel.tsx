@@ -17,7 +17,7 @@ export const ProductCarousel: FunctionComponent<ProductCarouselProps> = ({
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-
+    dots: true,
     slidesToScroll: 1,
     responsive: [
       {
